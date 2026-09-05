@@ -177,7 +177,7 @@ function MyProject() {
 
                     {project.githubUrl && (
                       <a
-                        href={project.githubUrl}
+                        href="https://github.com/LianaBikas80/my-portfolio-project.git"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-violet-500 hover:text-violet-600 dark:border-slate-700 dark:text-slate-200 dark:hover:border-violet-400 dark:hover:text-violet-400"
