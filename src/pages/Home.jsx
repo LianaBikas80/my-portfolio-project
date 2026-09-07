@@ -52,7 +52,7 @@ function Home() {
             <img
               src={profileImg}
               alt={t('home.profileAlt')}
-              className={`relative h-[280px] w-[280px] rounded-[2rem] object-cover shadow-2xl ring-1 ring-slate-200 transition-transform duration-500 sm:h-[340px] sm:w-[340px] lg:h-[420px] lg:w-[420px] dark:ring-slate-700 ${
+              className={`relative h-[280px] w-[280px] rounded-[2rem] object-cover shadow-2xl ring-1 ring-slate-200 transition-transform duration-300 ease-in-out sm:h-[340px] sm:w-[340px] lg:h-[420px] lg:w-[420px] dark:ring-slate-700 ${
                 lang === 'fa' ? '-scale-x-100' : 'scale-x-100'
               }`}
             />
