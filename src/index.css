@@ -1,19 +1,27 @@
- 
-  @import "tailwindcss";
- @custom-variant dark (&:where(.dark, .dark *));
-  * {
-    box-sizing: border-box;
-  }
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-  html {
-    scroll-behavior: smooth;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  /* انیمیشن نرم، آرام و آرامش‌بخش از پایین به بالا */
+html {
+  scroll-behavior: smooth;
+}
+
+/* فونت پیش‌فرض انگلیسی */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* سوییچ خودکار به فونت فارسی هنگام تغییر زبان */
+[dir="rtl"],
+:lang(fa) {
+  font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+}
+
+/* انیمیشن نرم، آرام و آرامش‌بخش از پایین به بالا */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -32,6 +40,7 @@
 .animation-delay-300 {
   animation-delay: 300ms;
 }
+
 /* حذف دکمه‌های پیش‌فرض نمایش رمز در مرورگرهای کروم، اج و موتورهای بر پایه وب‌کیت */
 input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {
