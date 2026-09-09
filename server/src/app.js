@@ -39,7 +39,7 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/messages", messageRoutes);
 
 // ۳. مدیریت مسیرهای فرانت‌اند (SPA Routing)
-app.get("*", (req, res, next) => {
+app.get("/{*splat}", (req, res, next) => {
   // اگر درخواست مربوط به API بود و تعریف نشده بود، به میدلور 404 برود
   if (req.originalUrl.startsWith("/api")) {
     return next();
