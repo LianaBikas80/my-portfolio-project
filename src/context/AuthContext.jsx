@@ -5,7 +5,7 @@ const AuthContext = createContext(null);
 const CURRENT_USER_KEY = "auth_current_user";
 const TOKEN_KEY = "auth_token";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "/api/auth";
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(() => {
