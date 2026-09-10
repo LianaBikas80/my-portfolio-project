@@ -489,12 +489,23 @@ const AuthModal = ({ isOpen, onClose }) => {
 
         const result = await register(name, email, password);
 
-        if (!result.success) {
-          toast.error(getAuthMessage(result.code, "authModal.messages.UNKNOWN_ERROR"), {
-            toastId: AUTH_TOAST_ID,
-          });
+        // if (!result.success) {
+        //   toast.error(getAuthMessage(result.code, "authModal.messages.UNKNOWN_ERROR"), {
+        //     toastId: AUTH_TOAST_ID,
+        //   });
+        //   return;
+        // }
+          if (!result.success) {
+          const errorMessage = result.message || getAuthMessage(result.code, "authModal.messages.UNKNOWN_ERROR");
+          toast.error(errorMessage, { toastId: AUTH_TOAST_ID });
+
+          // اگر پیام مربوط به ثبت‌نام قبلی کاربر بود، خودکار تب را به ورود تغییر بده
+          if (result.message && result.message.includes("ثبت نام کرده است")) {
+            switchMode("login");
+          }
           return;
         }
+
 
         toast.success(getAuthMessage(result.code, "authModal.messages.REGISTER_SUCCESS"), {
           toastId: AUTH_TOAST_ID,
