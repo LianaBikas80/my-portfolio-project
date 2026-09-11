@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { FaMapMarkerAlt, FaLinkedin, FaEnvelope, FaCheckCircle, FaExclamationCircle, FaCloudUploadAlt } from 'react-icons/fa';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL ||'https://liana-portfolio.ir';
 const QUEUE_STORAGE_KEY = 'portfolio_pending_contact_messages';
 
 const Contact = () => {
